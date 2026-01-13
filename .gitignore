@@ -1,0 +1,5 @@
+Lab13/aws/
+Lab13/awscliv2.zip
+Lab13/.terraform/
+*.tfstate
+*.tfstate.backup
