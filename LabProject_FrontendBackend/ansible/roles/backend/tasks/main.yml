@@ -1,0 +1,18 @@
+---
+- name: Install httpd
+  yum:
+    name: httpd
+    state: present
+    update_cache: yes
+
+- name: Start and enable httpd
+  service:
+    name: httpd
+    state: started
+    enabled: true
+
+- name: Deploy backend page
+  template:
+    src: backend_index.html.j2
+    dest: /var/www/html/index.html
+

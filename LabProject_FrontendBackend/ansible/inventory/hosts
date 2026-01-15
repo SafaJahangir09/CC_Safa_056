@@ -1,0 +1,11 @@
+[frontend]
+frontend_server ansible_host=3.28.136.3
+
+[backend]
+backend1 ansible_host=51.112.252.21
+backend2 ansible_host=158.252.94.133
+backend3 ansible_host=51.112.228.63
+
+[all:vars]
+ansible_user=ec2-user
+ansible_ssh_private_key_file=~/.ssh/id_ed25519

@@ -1,0 +1,5 @@
+---
+- name: Common base role (noop)
+  debug:
+    msg: "Common role executed"
+
