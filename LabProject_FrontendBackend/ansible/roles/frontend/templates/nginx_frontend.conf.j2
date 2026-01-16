@@ -12,9 +12,10 @@ http {
     default_type        application/octet-stream;
 
     upstream backend_servers {
-        server {{ backend1_private_ip }}:80;
-        server {{ backend2_private_ip }}:80;
-        server {{ backup_backend_private_ip }}:80 backup;
+        # Dynamically pulling private IPs from inventory
+        server {{ hostvars[groups['backend'][0]].ansible_ssh_host_private }}:80;
+        server {{ hostvars[groups['backend'][1]].ansible_ssh_host_private }}:80;
+        server {{ hostvars[groups['backend'][2]].ansible_ssh_host_private }}:80 backup;
     }
 
     server {
@@ -29,4 +30,3 @@ http {
         }
     }
 }
-

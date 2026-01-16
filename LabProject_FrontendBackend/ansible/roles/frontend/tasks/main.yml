@@ -1,19 +1,16 @@
----
-- name: Install nginx
-  yum:
-    name: nginx
-    state: present
-    update_cache: yes
+- name: Install nginx using amazon-linux-extras
+  shell: "amazon-linux-extras install nginx1 -y"
+  args:
+    creates: /usr/sbin/nginx
 
 - name: Start and enable nginx
   service:
     name: nginx
     state: started
-    enabled: true
+    enabled: yes
 
-- name: Deploy nginx config
+- name: Deploy nginx configuration
   template:
     src: nginx_frontend.conf.j2
     dest: /etc/nginx/nginx.conf
-  notify: Restart nginx
-
+  notify: restart nginx
