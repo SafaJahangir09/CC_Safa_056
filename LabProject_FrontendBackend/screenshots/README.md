@@ -115,10 +115,10 @@ terraform apply -auto-approve
 ## ✅ Verification
 
 - Access backend servers directly:
-  http://<backend-public-ip>
+  http://"backend-public-ip"
 
 - Access frontend load balancer:
-  http://<frontend-public-ip>
+  http://"frontend-public-ip"
 
 - Load balancing observed between backend 1 and backend 2
 - Backup backend responds when primary backends are stopped
@@ -130,6 +130,7 @@ It fulfills all lab requirements, uses Ansible roles correctly, and ensures auto
 
 ## 👤 Author
 
-Name: Safa Jahangir
-Course: Cloud Computing
-Lab Type: Open-Ended Lab Project
+- Name: Safa Jahangir
+- Course: Cloud Computing
+- Lab Type: Open-Ended Lab Project
+
