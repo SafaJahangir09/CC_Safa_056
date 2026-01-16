@@ -19,7 +19,9 @@ upstream backend_servers {
     server {{ hostvars['backend3'].private_ip }}:80 backup;
 }
 
+
 ## ✅ Verification & Results
 - **Deployment**: Successful execution of Ansible playbooks across 4 nodes.
 - **Failover Test**: Verified that traffic shifts to Backend 3 when primary nodes are down.
 - **Documentation**: Detailed step-by-step screenshots and terminal logs are available in the **[Your_Filename].pdf** uploaded to this repository.
+
