@@ -1,0 +1,28 @@
+# --- Terraform ---
+# Ignore local state files (they contain secrets and infrastructure info)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+
+# --- Ansible ---
+# Ignore retry files
+*.retry
+
+# --- SSH & Secrets ---
+# NEVER push your private keys or credentials
+*.pem
+*.pub
+id_rsa
+id_ed25519
+.aws/
+credentials
+config
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.log
